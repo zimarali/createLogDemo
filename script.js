@@ -16,6 +16,7 @@ function createChatterLog(){
 function createCOLLog(){
   console.log("you hit the COL button.");
   checkVIN();
+  checkName();
   checkReplacement();
 }
 
