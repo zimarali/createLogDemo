@@ -5,6 +5,15 @@ app.config(function($routeProvider, $locationProvider) {
     .when('/', {
       templateUrl: './views/home.html'
     })
+    .when('/ALLY', {
+      templateUrl: './views/ALLY.html'
+    })
+    .when('/ALLY/PQAlly', {
+      templateUrl: './views/PQALLY.html'
+    })
+    .when('/ALLY/PQNote', {
+      templateUrl: './views/PQNote.html'
+    })
     .when('/PQ', {
       templateUrl: './views/PQ.html'
     })
