@@ -5,6 +5,15 @@ function createLog(){
   checkEngine();
   contactPhone();
   pickupHours();
+  turvoLog();
+}
+
+function turvoLog(){
+  checkEngineTurvo();
+  checkNameTurvo();
+  checkKeyTurvo();
+  contactPhoneTurvo();
+  pickupHoursTurvo();
 }
 
 function allyLog(){
@@ -50,9 +59,21 @@ function checkName(){
   document.getElementById("NAME").innerHTML = name;
 }
 
+function checkNameTurvo(){
+  var name = document.getElementById("nameInput").value;
+  document.getElementById("tNAME").innerHTML = name;
+  document.getElementById("tNAME2").innerHTML = name;
+  console.log("names happen.")
+}
+
 function contactPhone(){
   var number = document.getElementById("phoneInput").value;
   document.getElementById("NUMBER").innerHTML = number;
+}
+
+function contactPhoneTurvo(){
+  var number = document.getElementById("phoneInput").value;
+  document.getElementById("tNUMBER").innerHTML = number;
 }
 
 function checkKey(){
@@ -60,6 +81,14 @@ function checkKey(){
     document.getElementById("KEYS").innerHTML = "keys";
   } else {
     document.getElementById("KEYS").innerHTML = "no keys";
+  }
+}
+
+function checkKeyTurvo(){
+  if(document.getElementById("keyCheck").checked) {
+    document.getElementById("tKEYS").innerHTML = "KEYS";
+  } else {
+    document.getElementById("tKEYS").innerHTML = "NO KEYS";
   }
 }
 
@@ -76,6 +105,14 @@ function checkEngine(){
     document.getElementById("STATE").innerHTML = "operable";
   } else {
     document.getElementById("STATE").innerHTML = "inoperable";
+  }
+}
+
+function checkEngineTurvo(){
+  if(document.getElementById("engineCheck").checked) {
+    document.getElementById("tSTATE").innerHTML = "RUNS";
+  } else {
+    document.getElementById("tSTATE").innerHTML = "INOP";
   }
 }
 
@@ -100,6 +137,13 @@ function pickupHours(){
   var hours = document.getElementById("pHours").value;
   document.getElementById("DAYS").innerHTML = days;
   document.getElementById("HOURS").innerHTML = hours;
+}
+
+function pickupHoursTurvo(){
+  var days = document.getElementById("pDays").value;
+  var hours = document.getElementById("pHours").value;
+  document.getElementById("tDAYS").innerHTML = days;
+  document.getElementById("tHOURS").innerHTML = hours;
 }
 
 function checkVIN(){
