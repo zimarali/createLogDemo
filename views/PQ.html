@@ -1,14 +1,42 @@
-Who did you speak to:<br>
-<input id="nameInput" type="text"><br>
-Phone Number:<br>
-<input id="phoneInput" type="text"><br>
-Vehicle Information<br>
-Keys:<input id="keyCheck" type="checkbox"><br>
-Operable:<input id="engineCheck" type="checkbox"><br>
-Pickup Hours<br>
-Days:<input id="pDays" type="text"><br>
-Hours:<input id="pHours" type="numbers" min="0000" max="2400"><br>
-<button type="submit" onclick="createLog()">Create Log</button>
-<br>
+<div class="container"><h3>WHEELS PQ</h3></div>
+<div class="container">
+  Who did you speak to:
+  <label for="Name"><input id="nameInput" type="text"></label>
+  Phone Number:
+  <input id="phoneInput" type="text">
+</div>
+<div class="container">
+Pickup Days:<input id="pDays" type="text">
+Pickup Hours:<input id="pHours" type="text">
+</div>
+<div class="container">
+Vehicle Status:
+<form action="#">
+  <p>
+    <label>
+    <input id="keyCheck" type="checkbox">
+    <span class="black-text"><b>Keys</b></span>
+  </p>
+</form>
+<form action="#">
+  <p>
+    <label>
+    <input id="engineCheck" type="checkbox">
+    <span class="black-text"><b>Operable</b></span>
+  </p>
+</form>
+
+</div>
+
+<div class="container">
+<button class="waves-effect waves-light btn-small blue-grey" type="submit" onclick="createLog()">Create Log</button>
+</div>
+<div class="container">
+Saleforce Log:
+<div class="card-panel grey lighten-2">
 <p id="log">Per <span id="NAME">NAME</span>, unit is ready for pickup. Vehicle has <span id="KEYS">KEYS</span> and is <span id="STATE">STATE</span>. Contact <span id="NAME2">NAME</span> for pickup at <span id="NUMBER">NUMBER</span>. Pickup hours <span id="DAYS">DAYS</span> <span id="HOURS">HOURS</span>.</p>
+</div>
+Turvo Log:
+<div class="card-panel grey lighten-2">
 <p id="log">Per <span id="tNAME">NAME</span>, <span id="tKEYS">KEYS</span>, <span id="tSTATE">STATE</span>. Contact <span id="tNAME2">NAME</span> for pickup at <span id="tNUMBER">NUMBER</span>. Pickup hours <span id="tDAYS">DAYS</span> <span id="tHOURS">HOURS</span>.</p>
+</div>

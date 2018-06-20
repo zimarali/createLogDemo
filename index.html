@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html ng-app="createLog">
   <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <meta charset="utf-8">
     <title>createLog</title>
   </head>
   <body>
-    <a href="#/">Home</a>
-    <a href="#/ALLY">ALLY</a>
-    <a href="#/PQ">PQ</a>
-    <a href="#/INOP">INOP</a>
-    <a href="#/APPROVAL">APPROVAL</a>
-    <a href="#/COL">COL</a>
-    <a href="#/LVM">LVM</a><br>
+    <nav>
+      <div class="nav-wrapper blue-grey">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/ALLY/PQAlly">ALLY</a></li>
+        <li><a href="#/PQ">WHEELS PQ</a></li>
+        <li><a href="#/INOP">INOP</a></li>
+        <li><a href="#/APPROVAL">APPROVAL</a></li>
+        <li><a href="#/COL">COL</a></li>
+      </div>
+    </nav>
     <ng-view></ng-view>
 
 
 
 
     <script src="script.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     <script src="module.js"></script>

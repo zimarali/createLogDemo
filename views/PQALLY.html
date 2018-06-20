@@ -1,10 +1,46 @@
-Who did you speak to:<br>
-<input id="nameInput" type="text"><br>
-Phone Number:<br>
-<input id="phoneInput" type="text"><br>
-Vehicle Information<br>
-Keys:<input id="keyCheck" type="checkbox"><br>
-Full Access:<input id="accessCheck" type="checkbox"><br>
-Operable:<input id="engineCheck" type="checkbox"><br>
-<button type="submit" onclick="allyLog()">Create Log</button>
+<div class="container"><h3>ALLY PQ</h3></div>
+<div class="container" id="prompt">Who did you speak to:</div>
+  <div class="container"><input id="nameInput" type="text"></div>
+<div class="container" id="prompt">Phone Number:</div>
+  <div class="container"><input id="phoneInput" type="text"></div>
+<div class="container" id="prompt">Vehicle Status</div>
+<div class="container"><form action="#">
+  <p>
+    <label>
+    <input id="keyCheck" type="checkbox">
+    <span class="black-text"><b>Keys</b></span>
+  </p>
+</form>
+<form action="#">
+  <p>
+    <label>
+    <input id="accessCheck" type="checkbox">
+    <span class="black-text"><b>Full Access</b></span>
+  </p>
+</form>
+<form action="#">
+  <p>
+    <label>
+    <input id="engineCheck" type="checkbox">
+    <span class="black-text"><b>Operable</b></span>
+  </p>
+</form>
+</div>
+<div class="container"><button class="waves-effect waves-light btn-small blue-grey" type="submit" onclick="allyLog()">Create Log</button>
+<div class="card-panel grey lighten-2">
 <p id="log">Per <span id="NAME">NAME</span>, <span id="KEYS">KEYS</span>, <span id="STATE">STATE,</span><span id="ACCESS">ACCESS</span>. VERIFIED LOT. CONTACT 24HRS PRIOR TO PICKUP. <span id="NUMBER">NUMBER</span>
+</div>
+</div>
+<div class="container">
+<h4>Fees</h4>
+<div class="titles">INOP</div>
+8 C41333-Western Flat bed Hookup Fee
+<br>
+9 C41333-Western Flat Bed Transport Mileage Fee
+<br>
+<div class="titles">Standard</div>
+6 C41333-Western Standard Carrier HookUp Fee
+<br>
+7 C41333-Western Standard Transport Mileage Fee
+<br>
+</div>
