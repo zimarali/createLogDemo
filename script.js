@@ -6,6 +6,9 @@ function createLog(){
   contactPhone();
   pickupHours();
   turvoLog();
+  placeNotes();
+  displayLog1();
+  displayLog2();
 }
 
 function turvoLog(){
@@ -14,6 +17,7 @@ function turvoLog(){
   checkKeyTurvo();
   contactPhoneTurvo();
   pickupHoursTurvo();
+  // placeTNotes();
 }
 
 function allyLog(){
@@ -23,6 +27,7 @@ function allyLog(){
   checkAllyEngine();
   checkAccess();
   contactPhone();
+  displayLog1();
 }
 
 function createChatterLog(){
@@ -53,6 +58,16 @@ function contactAllyName(){
   var name = document.getElementById("nameInput").value;
   document.getElementById("NAME").innerHTML = name;
 }
+
+function placeNotes(){
+  var eNotes = document.getElementById("extraNotes").value;
+  document.getElementById("NOTES").innerHTML = eNotes;
+}
+
+// function placeTNotes(){
+//   var eNotes = document.getElementById("extraNotes").value;
+//   document.getElementById("tNOTES").innerHTML = eNotes;
+// }
 
 function checkName(){
   var name = document.getElementById("nameInput").value;
@@ -117,9 +132,12 @@ function checkEngineTurvo(){
 }
 
 function checkAllyEngine(){
-  if(document.getElementById("engineCheck").checked) {
+  if(document.getElementById("engineCheck").checked && document.getElementById("keyCheck").checked) {
     document.getElementById("STATE").innerHTML = "RUNS";
-  } else {
+  } else if (document.getElementById("keyCheck").checked) {
+    document.getElementById("STATE").innerHTML = "INOP";
+  }
+    else {
     document.getElementById("STATE").innerHTML = "UNKNOWN RUNNER";
   }
 }
@@ -162,4 +180,22 @@ function checkReplacement(){
   } else {
     document.getElementById("rSTATE").innerHTML = "they do not have this unit at their location.";
   }
+}
+
+function displayLog1(){
+  var gLog = document.getElementById('log1');
+  if (gLog.style.visibility === "hidden") {
+        gLog.style.visibility = "visible";
+    } else {
+        gLog.style.visibility = "visible";
+    }
+}
+
+function displayLog2(){
+  var gLog = document.getElementById('log2');
+  if (gLog.style.visibility === "hidden") {
+        gLog.style.visibility = "visible";
+    } else {
+        gLog.style.visibility = "visible";
+    }
 }
