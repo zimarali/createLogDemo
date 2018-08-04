@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $('.modal').modal();
+  });
+  
 function createLog(){
   console.log("you hit the button.");
   contactName();
@@ -5,6 +9,8 @@ function createLog(){
   checkEngine();
   contactPhone();
   pickupHours();
+  hasDamage();
+  hasMods();
   turvoLog();
   placeNotes();
   displayLog1();
@@ -15,6 +21,8 @@ function turvoLog(){
   checkEngineTurvo();
   checkNameTurvo();
   checkKeyTurvo();
+  hasModsTurvo();
+  hasDamageTurvo();
   contactPhoneTurvo();
   pickupHoursTurvo();
   // placeTNotes();
@@ -99,6 +107,23 @@ function checkKey(){
   }
 }
 
+function hasDamage(){
+  if(document.getElementById("damageCheck").checked) {
+    document.getElementById("DAMAGES").innerHTML = " Unit has damages.";
+  } else {
+    document.getElementById("DAMAGES").innerHTML = "";
+  }
+}
+
+function hasMods(){
+  if(document.getElementById("modCheck").checked) {
+    document.getElementById("MODS").innerHTML = " Unit has modifications.";
+  } else {
+    document.getElementById("MODS").innerHTML = "";
+  }
+}
+
+
 function checkKeyTurvo(){
   if(document.getElementById("keyCheck").checked) {
     document.getElementById("tKEYS").innerHTML = "KEYS";
@@ -128,6 +153,22 @@ function checkEngineTurvo(){
     document.getElementById("tSTATE").innerHTML = "RUNS";
   } else {
     document.getElementById("tSTATE").innerHTML = "INOP";
+  }
+}
+
+function hasDamageTurvo(){
+  if(document.getElementById("damageCheck").checked) {
+    document.getElementById("tDAMAGES").innerHTML = " DAMAGED.";
+  } else {
+    document.getElementById("tDAMAGES").innerHTML = "";
+  }
+}
+
+function hasModsTurvo(){
+  if(document.getElementById("modCheck").checked) {
+    document.getElementById("tMODS").innerHTML = " MODIFICATIONS.";
+  } else {
+    document.getElementById("tMODS").innerHTML = "";
   }
 }
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="createLog">
   <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
@@ -9,7 +10,7 @@
   <body>
     <nav>
       <div class="nav-wrapper blue-grey">
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <ul id="nav-mobile" class="left">
         <li><a href="#/">Home</a></li>
         <li><a href="#/ALLY/PQAlly">ALLY</a></li>
         <li><a href="#/PQ">WHEELS PQ</a></li>
@@ -20,9 +21,13 @@
     </nav>
     <ng-view></ng-view>
 
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large blue-grey" href="#/HELP">
+        <i class="large material-icons">help</i>
+      </a>
+    </div>
 
-
-
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="script.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>

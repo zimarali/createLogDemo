@@ -26,6 +26,9 @@ app.config(function($routeProvider, $locationProvider) {
     .when('/COL', {
       templateUrl: './views/COL.html'
     })
+    .when('/HELP', {
+      templateUrl: './views/help.html'
+    })
     .when('/LVM', {
       templateUrl: './views/LVM.html'
     })
